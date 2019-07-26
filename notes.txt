@@ -1,3 +1,18 @@
 left/right arrows not inuitive
 mobile-friendly
 mid-sept launch
+
+************* GULP ************* 
+1) copied following files from C:\Users\arsmi\Local Sites\real\app\public\wp-content\themes\real
+
+	gulpfile.js
+	package.json
+
+2) Change paths etc in gulpfile.js
+
+3) drop into root of project folder
+
+4) command line in root of project folder:
+	npm install --save-dev
+	npm install gulp-cli --save-dev
+	gulp
