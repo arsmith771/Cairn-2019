@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="app"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "csvjson.json";
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    myFunction(myArr);
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+  var out = "";
+  var i;
+  for(i = 0; i < arr.length; i++) {
+    out += '<article>' + arr[i].svg + '<p>' + arr[i].paragraph1 + '</p>' + 
+    arr[i].display + '</article>';
+  }
+  document.getElementById("app").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
