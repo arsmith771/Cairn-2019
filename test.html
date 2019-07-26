@@ -1,5 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB" dir="ltr">
+<head itemscope itemtype="https://schema.org/WebSite">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body{
+    margin:0;
+    padding:0;
+  }
+article {
+  max-width:400px;
+  margin:0 auto;
+  overflow:hidden;
+  height:100vh;
+  position: relative;
+}
+article div {
+  position:absolute;
+  top:0;
+  right:0;
+  left:30px;
+  z-index: 1;
+}
+svg {
+  width:100%;
+  height:auto;
+  display:block;
+}
+</style>
+</head>
 <body>
 
 <div id="app"></div>
@@ -21,8 +50,7 @@ function myFunction(arr) {
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
-    out += '<article>' + arr[i].svg + '<p>' + arr[i].paragraph1 + '</p>' + 
-    arr[i].display + '</article>';
+    out += '<article>' + arr[i].svg + '<div>' + arr[i].textContent + '</div></article>';
   }
   document.getElementById("app").innerHTML = out;
 }
