@@ -471,7 +471,7 @@ h2 {
 
 .story-screen {
   scroll-snap-align: start;
-  max-width:420px;
+  //max-width:420px;
   width: auto;
   display: inline-block;
   margin:0 auto;
@@ -581,14 +581,15 @@ h2 {
 
 
 .text-cta {
-  cursor:pointer;
+  /*cursor:pointer;
+  
   &--1 {
     animation: pulseOne 3s infinite;
   }
   &--2 {
     animation: pulseTwo 3s infinite;
   }
-
+  */
 }
 @keyframes pulseOne {
     0%{

@@ -1,9 +1,11 @@
 function toggleText(){
 
-	jQuery('.text-cta').on('click', function(){
+	//jQuery('.text-cta').on('click', function(){
+	jQuery('.pulse-box').on('click', function(){
 
 		console.log('open');
-		jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
+		//jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
+		jQuery(this).siblings('.story-screen__text').animate({right: '-7px'}, 500);
 		//alert('yay');
 
 	});
