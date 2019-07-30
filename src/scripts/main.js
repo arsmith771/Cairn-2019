@@ -64,8 +64,45 @@ function modalPosition(){
 	}
 }
 
+function pulsePosXY(){
+
+	function getOffset(element) {
+  		
+  		var bound = element.getBoundingClientRect(),
+  			html = document.documentElement;
+
+  		return {
+    		top: bound.top + window.pageYOffset - html.clientTop,
+    		left: bound.left + window.pageXOffset - html.clientLeft
+  		};
+	}
+
+var svg = document.getElementsByTagName('svg')[0];
+var offset = getOffset(svg);
+
+
+var x = offset.left;
+var y = offset.top;
+
+/*
+var box = document.createElement('div');
+box.style['position'] = "absolute";
+box.style['left'] = offset.left + "px";
+box.style['top'] = offset.top + "px";
+box.style['background-color'] = "blue";
+box.style['width'] = "32px";
+box.style['height'] = "32px";
+*/
+
+//document.body.appendChild(box);
+
+	console.log('x = ' + x +', y = ' + y); 
+
+}
+
 jQuery(document).ready(function(){
 
+	pulsePosXY();
 	toggleText();
 	closeText();
 	ctrlAudio();
@@ -74,6 +111,7 @@ jQuery(document).ready(function(){
 
 jQuery(window).on('resize', function(){
 
+	pulsePosXY();
 	modalPosition();
 	
 });
