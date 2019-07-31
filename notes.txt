@@ -16,3 +16,15 @@ mid-sept launch
 	npm install --save-dev
 	npm install gulp-cli --save-dev
 	gulp
+
+
+
+--------------
+
+1) write JSON schema - 17 items DONE
+2) Remove <title> from all svg files. DONE
+3) " > ' and minify code for each svg, copy and paste into JSON file DONE
+4) add class to all svgs inline DONE
+5) add class to all svgs, all svgs into images folder DONE
+6) add image pathnames to JSON file
+7) Amend JS in index.html for AJAX output

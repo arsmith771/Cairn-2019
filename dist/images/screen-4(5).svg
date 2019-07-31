@@ -1,4 +1,4 @@
-<svg id="e8eff67d-e17f-4163-83d8-c7e0c7be232d" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 465.11 727.87">
+<svg class="story-screen__graphic" id="e8eff67d-e17f-4163-83d8-c7e0c7be232d" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 465.11 727.87">
   <defs>
     <style>
       .a32868cb-da2b-4c7b-ba68-146a0165ed7c, .a4ca20aa-c976-4042-82d3-8ef5bd4111b2, .afd8bddf-93c4-4a2c-823a-61b8fd8ba723, .b5798fcb-ed2a-4df4-a9e3-aff31daa35e7, .bb095c2c-3d7c-4d5e-a784-2e894b36c881, .f162f811-05f2-423a-8ebc-57b74da0cfdd {
@@ -198,7 +198,6 @@
       <rect class="afd8bddf-93c4-4a2c-823a-61b8fd8ba723" x="279.25" y="465.08" width="7.37" height="3.97" rx="1.48"/>
     </clipPath>
   </defs>
-  <title>screen-4</title>
   <rect class="a74a7bb1-4db1-4eff-b988-c8ed76c54c29" x="-1.55" y="-926.54" width="465.11" height="2577.43"/>
   <polygon class="b0280f2e-6414-411d-b7d9-3e2601b2af28" points="435.19 0.89 464.55 0.2 464.67 729.69 384.19 428.58 384.19 29.42 435.19 0.89"/>
   <path class="ac7498af-d94e-4230-9d9c-d7b8a385e342" d="M472,734A1685.9,1685.9,0,0,1,427.08,95.41c10.24-83.91,43.15-154.54,35.13-238.68l-103.79,1.86c8,84.15-8.58,149.39-18.82,233.29a1686,1686,0,0,0,44.88,638.6Z"/>

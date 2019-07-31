@@ -1,4 +1,4 @@
-<svg id="f491f842-411e-45cd-acc4-a811236ae698" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 464.99 729.84">
+<svg class="story-screen__graphic" id="f491f842-411e-45cd-acc4-a811236ae698" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 464.99 729.84">
   <defs>
     <style>
       .a772a864-9e41-44b8-b2ae-4a31eadfd6d4, .abf39533-e2b0-4a8d-95c1-a6e5a49d0a2e, .ad7361c1-6c20-47a4-b1ea-353127e117dc, .b0e1c738-b011-44ca-adfc-df2f1e71b9a6, .b45e3899-f33a-4cdc-99a9-8fd7fe9185bb, .b55165f8-8dad-4c1c-b79f-929fedebff42, .e120e4cd-9235-40f7-8613-5c58d805255b, .e643870b-1b78-41d9-b0d8-045b88464a6b, .f65519f2-dc40-4243-b1f5-a76ad8ed3ede {
@@ -187,7 +187,6 @@
       <rect class="e120e4cd-9235-40f7-8613-5c58d805255b" x="105.46" y="282.91" width="11.63" height="6.27" rx="1.69"/>
     </clipPath>
   </defs>
-  <title>screen-15</title>
   <rect class="bac2ac11-7b05-48e6-bca3-1a813c5123d3" x="-1.58" y="-1800.53" width="465.11" height="2577.43"/>
   <path class="e120e4cd-9235-40f7-8613-5c58d805255b" d="M121.8,517.85l.72,34.6"/>
   <path class="a6693091-0613-4ccd-b5c1-f01272c6534a" d="M.22,50.34a613.82,613.82,0,0,1,226.62,42.5c31.46,12.38,62.17,27.54,88.56,48.68,44.41,35.59,74.51,86.66,92.77,140.56S460.52,455.31,465.42,512l-1.9-181.07c-8.85-62.05-17.82-81.25-40.54-133.42S365.94,97,318.69,65.28c-28.07-18.85-58.62-31.62-90.13-43.88C165.8-3,75.33-21,0-21Z"/>

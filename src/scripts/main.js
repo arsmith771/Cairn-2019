@@ -1,11 +1,11 @@
-function toggleText(){
+function toggleText(elem0, elem1){
 
 	//jQuery('.text-cta').on('click', function(){
-	jQuery('.pulse-box').on('click', function(){
-
-		console.log('open');
+	jQuery(document).on('click', elem0, function(){
+		//alert('open');
+		//console.log('open');
 		//jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
-		jQuery(this).siblings('.story-screen__text').animate({right: '-7px'}, 500);
+		jQuery( elem1 ).animate({right: '-7px'}, 500);
 		//alert('yay');
 
 	});
@@ -13,15 +13,18 @@ function toggleText(){
 
 function closeText(){
 
-	jQuery('.story-screen__text__close').on('click', function(){
+	jQuery(document).on('click', '#story-screen__text__close--0', function(){
 
-		console.log('closed');
-		jQuery('.story-screen__text').animate({right: '-410px'}, 300);
+		//console.log('closed');
+		//alert('closed');
+		jQuery('#story-screen__text--0').animate({right: '-410px'}, 300);
 
+		/*
 		var audioTrack = document.getElementById('audio-1'); 
 		audioTrack.pause(); 
 		jQuery('.story-screen__audio-ctrl').addClass('paused');
 		jQuery('.story-screen__audio-ctrl').removeClass('playing');
+		*/
 
 	});
 }
@@ -52,7 +55,7 @@ function modalPosition(){
 
 	var storyScreenW = jQuery('.story-screen').width();
 
-	console.log(storyScreenW);
+	//console.log(storyScreenW);
 
 	if ( storyScreenW < 320 ){
 
@@ -96,22 +99,23 @@ box.style['height'] = "32px";
 
 //document.body.appendChild(box);
 
-	console.log('x = ' + x +', y = ' + y); 
+	//console.log('x = ' + x +', y = ' + y); 
 
 }
 
 jQuery(document).ready(function(){
 
-	pulsePosXY();
-	toggleText();
+	//pulsePosXY();
+	toggleText('#layer-cta-0', '#story-screen__text--0');
 	closeText();
-	ctrlAudio();
+	//ctrlAudio();
 	modalPosition();
+	//alert();
 });
 
 jQuery(window).on('resize', function(){
 
-	pulsePosXY();
+	//pulsePosXY();
 	modalPosition();
 	
 });

@@ -7,9 +7,10 @@
   <title></title>
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css?v=1.1.2">
 </head>
 <body>
+
 <main>
 <div class="app" id="app"></div>
 </main>
@@ -30,7 +31,7 @@ function myFunction(arr) {
   var out = "";
   var i;
   for(i = 0; i < arr.length; i++) {
-    out += '<article class="story-screen story-screen--' + i + '">' + arr[i].svg + '<div class="story-screen__text"><div class="story-screen__text__close">x</div>' + arr[i].textContent + '</div><footer class="story-screen__footer">Text here TBC</footer></article>';
+    out += '<article class="story-screen story-screen--' + i + '">' + arr[i].svg + '<div id="layer-cta-' + i + '" class="pulse-box"></div><div id="story-screen__text--' + i + '" class="story-screen__text"><div id="story-screen__text__close--' + i + '" class="story-screen__text__close"></div><div class="story-screen__text__inner">' + arr[i].textContent + '</div><div class="story-screen__audio-ctrl paused" id="ctrl"></div></div></article>';
   }
   document.getElementById("app").innerHTML = out;
 }
@@ -39,6 +40,6 @@ function myFunction(arr) {
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-<script src="scripts/main.min.js"></script>
+<script src="scripts/main.min.js?v=1.2"></script>
 </body>
 </html>

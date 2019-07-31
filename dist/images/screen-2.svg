@@ -1,4 +1,4 @@
-<svg id='b497ef6f-b750-4fca-8f0b-5a49e05866ee' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 464.68 729.02'>
+<svg class="story-screen__graphic" id='b497ef6f-b750-4fca-8f0b-5a49e05866ee' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 464.68 729.02'>
   <defs>
     <style>
       .a59a0ed1-0418-441e-8d78-f958e035c4c1, .ab4a3557-c3df-4a86-ac29-ea1fde4303bf, .aca69f66-a88c-4477-9026-eddb61d82273, .af40a17f-75e5-4847-8492-223ef256e21c, .b3e8293b-6db2-4909-ab67-2b03bbeaf28c, .b4059b4e-e6c9-4c5d-8f69-4b5f5a4ef1eb, .bf7de1cd-cde8-4b53-be3e-2120976c317c, .bf853984-d646-4a8b-8d5f-7fe7724061bb, .e4091852-2be1-43f0-a35a-bbf4767b6367, .e464950c-73be-4fb8-b03c-8ab59544d8eb, .e7ef3673-8ea6-4072-9025-e36c9a6a7d47, .e9b0a44a-17e6-44d5-a42d-efb47886e7f2, .ec465899-cdf2-46b2-b866-4b1e4b366c82, .ef78eb81-c2bd-41c8-a5bc-f9534e814661, .f4ca9c3b-569a-464c-a4e6-e0c5583c1432, .f6ecde9a-6a9a-49d3-a954-36a1b6f758a1, .fd795aec-cd77-4f51-aa25-c153a3f7d252 {
@@ -237,7 +237,6 @@
       <rect class='b4059b4e-e6c9-4c5d-8f69-4b5f5a4ef1eb' x='67.22' y='330.47' width='7.64' height='4.12' rx='1.09'/>
     </clipPath>
   </defs>
-  <title>screen-2</title>
   <rect class='f1ce44d7-8a8c-4b66-8d77-25373e4d599b' x='-0.43' y='-1801.39' width='465.11' height='2577.43'/>
   <rect class='f1ce44d7-8a8c-4b66-8d77-25373e4d599b' x='-1.26' y='-39.37' width='465.93' height='589.65'/>
   <rect class='bd0aa9f5-73c2-41bf-8678-a0a26c642aac' x='0.11' y='55.05' width='429.57' height='23.42'/>

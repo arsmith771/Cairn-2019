@@ -452,6 +452,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+$streetGrey: #AEAAA1;
+$grassGreen: #3C5743;
+$defaultCream: #EDE8DB;
+$white: #ffffff;
+
 body {
   font-family: 'Quicksand', sans-serif;
 }
@@ -462,19 +467,29 @@ h2 {
   margin:0 0 1rem 0;
 }
 .app{
-  overflow-y: hidden; // overflow-y: scroll; in production
+  overflow-y: scroll;
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   text-align:center;
 }
-
+.pulse-box{
+  position:absolute;
+  left: 0;
+  top: 0;
+  width:20px;
+  height:20px;
+  background-color: #fff;
+  cursor:pointer;
+}
 .story-screen {
   scroll-snap-align: start;
+  clear:both;
   //max-width:420px;
   width: 100vw;
   max-width: 64vh;
-  display: inline-block;
+  height: 100vh;
+  display: block;
   margin:0 auto;
   overflow:hidden;
   //height:100vh;
@@ -492,7 +507,17 @@ h2 {
   }
   */
   position: relative;
-  background-color:#DDDDDD;
+  background-color: $streetGrey;
+  &:nth-child(11){
+    background-color: $white;
+  }
+  &:nth-child(12){
+    background-color: $grassGreen;
+  }
+  &:nth-child(14),
+  &:last-child {
+    background-color: $defaultCream;
+  }
   &__audio-ctrl{
     position:absolute;
     bottom:10px;
@@ -521,7 +546,8 @@ h2 {
         and (max-device-width : 1024px) {
           bottom: 20%;
     }
-    right:-400px;
+    //right:-400px;
+    right:-7px;
     width:320px;
     z-index: 1;
     background-color: #EDE8DB;
