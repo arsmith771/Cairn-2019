@@ -7,11 +7,50 @@
   <title></title>
   <meta name="description" content="">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css?v=1.1.2">
+  <!--<link rel="stylesheet" href="styles/style.css?v=1.1.2">-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+.main{
+
+}
+.app {
+
+  height: 100vh;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+      text-align: center;
+}
+
+article {
+
+  scroll-snap-align: start;
+  height: 100vh;
+  outline: 1px solid red;
+  
+  scroll-snap-align: start;
+  clear:both;
+  width: 100vw;
+  max-width: 64vh;
+  height: 100vh;
+  position: relative;
+  overflow:hidden;
+  text-align:left;
+  font-size: 0.9rem;
+
+
+}
+  </style>
 </head>
 <body>
 
-<main>
+<main class="main" style="overflow:auto;-webkit-overflow-scrolling:touch;">
 <div class="app" id="app"></div>
 </main>
 <script>
@@ -30,16 +69,63 @@ xmlhttp.send();
 function myFunction(arr) {
   var out = "";
   var i;
+  
   for(i = 0; i < arr.length; i++) {
-    out += '<article class="story-screen story-screen--' + i + '">' + arr[i].svg + '<div id="layer-cta-' + i + '" class="pulse-box"></div><div id="story-screen__text--' + i + '" class="story-screen__text"><div id="story-screen__text__close--' + i + '" class="story-screen__text__close"></div><div class="story-screen__text__inner">' + arr[i].textContent + '</div><div class="story-screen__audio-ctrl paused" id="ctrl"></div></div></article>';
+    out += '<article class="story-screen story-screen--' + i + '" id="story-screen--' + i + '">' + arr[i].svg + '<div id="layer-cta-' + i + '" class="pulse-box"></div><div id="story-screen__text--' + i + '" class="story-screen__text"><div id="story-screen__text__close--' + i + '" class="story-screen__text__close"></div><div class="story-screen__text__inner">' + arr[i].textContent + '</div><div class="story-screen__audio-ctrl paused" id="ctrl"></div></div></article>';
   }
+  
   document.getElementById("app").innerHTML = out;
 }
+
 </script>
+<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+<script>
+  const gra = function(min, max) {
+    return Math.random() * (max - min) + min;
+};
+const init = function() {
+    let items = document.querySelectorAll("article");
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.minHeight = gra(120, 205) + "vh";
+       // items[i].style.background = randomColor({ luminosity: "light" });
+    }
+
+    cssScrollSnapPolyfill();
+};
+init();
+</script>
+<!--<script>
+var xmlhttp = new XMLHttpRequest();
+var url = "csvjson.json";
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    myFunction(myArr);
+  }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+  var out = "";
+  var i;
+  
+  for(i = 0; i < arr.length; i++) {
+    out += '<article class="story-screen story-screen--' + i + '" id="story-screen--' + i + '">' + arr[i].svg + '<div id="layer-cta-' + i + '" class="pulse-box"></div><div id="story-screen__text--' + i + '" class="story-screen__text"><div id="story-screen__text__close--' + i + '" class="story-screen__text__close"></div><div class="story-screen__text__inner">' + arr[i].textContent + '</div><div class="story-screen__audio-ctrl paused" id="ctrl"></div></div></article>';
+  }
+  
+  document.getElementById("app").innerHTML = out;
+}
+
+</script>-->
+
+
+
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-<script src="scripts/main.min.js?v=1.2"></script>
+<!--<script src="scripts/main.min.js?v=1.2.1"></script>-->
 </body>
 </html>

@@ -28,3 +28,9 @@ mid-sept launch
 5) add class to all svgs, all svgs into images folder DONE
 6) add image pathnames to JSON file
 7) Amend JS in index.html for AJAX output
+
+
+
+<p>ANCHO tenants voted overwhelmingly in favour of a new partnership with Cairn, 94% of votes were in favour on a turnout of 61%.</p>
+
+

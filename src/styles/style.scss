@@ -467,11 +467,11 @@ h2 {
   margin:0 0 1rem 0;
 }
 .app{
-  overflow-y: scroll;
   height: 100vh;
-  scroll-snap-points-y: repeat(100vh);
+  overflow-y: scroll;
+  border: 1px solid gray;
+  -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
-  text-align:center;
 }
 .pulse-box{
   position:absolute;
@@ -483,16 +483,18 @@ h2 {
   cursor:pointer;
 }
 .story-screen {
+ scroll-snap-align: start;
+  height: 100vh;
+  outline: 1px solid red;
+
   scroll-snap-align: start;
   clear:both;
-  //max-width:420px;
   width: 100vw;
   max-width: 64vh;
   height: 100vh;
   display: block;
-  margin:0 auto;
+  /*margin:0 auto;*/
   overflow:hidden;
-  //height:100vh;
   text-align:left;
   font-size: 0.9rem;
   @media only screen and (min-width: 330px) {
@@ -541,24 +543,22 @@ h2 {
     }
     z-index: 2;
     top:2%;
-    bottom: 3%;
+    padding:5% 0 80px 5%;
+    min-height: 50%;
     @media only screen and (min-device-width: 768px) 
         and (max-device-width : 1024px) {
           bottom: 20%;
     }
-    //right:-400px;
-    right:-7px;
+    right:-400px;
+    //right:-7px;
     width:320px;
     z-index: 1;
     background-color: #EDE8DB;
     border:6px solid #EA5736;
     border-radius: 20px 0 0 20px;
     &__inner{
-      position:absolute;
-      top:5%;
-      left:5%;
-      bottom:70px;
-      right:5%;
+      max-height: 70vh;
+      padding:0 5% 0 0;
       overflow:auto;
     }
     &__close{
@@ -817,4 +817,3 @@ h2 {
     page-break-after: avoid;
   }
 }
-
