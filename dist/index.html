@@ -71,7 +71,7 @@ function myFunction(arr) {
   var i;
   
   for(i = 0; i < arr.length; i++) {
-    out += '<article class="story-screen story-screen--' + i + '" id="story-screen--' + i + '">' + arr[i].svg + '<div id="layer-cta-' + i + '" class="pulse-box"></div><div id="story-screen__text--' + i + '" class="story-screen__text"><div id="story-screen__text__close--' + i + '" class="story-screen__text__close"></div><div class="story-screen__text__inner">' + arr[i].textContent + '</div><div class="story-screen__audio-ctrl paused" id="ctrl"></div></div></article>';
+    out += '<article class="story-screen story-screen--' + i + '" id="story-screen--' + i + '">' + arr[i].svg + '<a href="#story-screen__text--' + i + '" title="Read more" id="layer-cta-' + i + '" class="pulse-box"></a><div id="story-screen__text--' + i + '" class="story-screen__text"><button title="Close this panel" id="story-screen__text__close--' + i + '" class="story-screen__text__close"></button><div class="story-screen__text__inner">' + arr[i].textContent + '</div><button class="story-screen__audio-ctrl paused" id="ctrl-' + i + '"></button></div><audio id="audio-' + i + '"><source src="audio/' + arr[i].audioFile + '" type="audio/mpeg">Your browser does not support the audio element.</audio></article>';
   }
   
   document.getElementById("app").innerHTML = out;

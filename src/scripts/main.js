@@ -1,17 +1,19 @@
 function toggleText(elem0, elem1){
 
 	//jQuery('.text-cta').on('click', function(){
-	jQuery(document).on('click', elem0, function(){
+	jQuery(document).on('click', elem0, function(event){
 		//alert('open');
 		//console.log('open');
 		//jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
-		jQuery( elem1 ).animate({right: '-6px'}, 500);
+		event.preventDefault();
+		jQuery( elem1 ).animate({right: '-7px'}, 500);
+
 		//alert('yay');
 
 	});
 }
 
-function closeText(elem0, elem1){
+function closeText(elem0, elem1, elem2, elem3){
 
 	jQuery(document).on('click', elem0, function(){
 
@@ -19,21 +21,22 @@ function closeText(elem0, elem1){
 		//alert('closed');
 		jQuery( elem1).animate({right: '-400px'}, 300);
 
-		/*
-		var audioTrack = document.getElementById('audio-1'); 
+		
+		var audioTrack = document.getElementById( elem2 ),
+			control = jQuery( elem3 );
 		audioTrack.pause(); 
-		jQuery('.story-screen__audio-ctrl').addClass('paused');
-		jQuery('.story-screen__audio-ctrl').removeClass('playing');
-		*/
+		control.addClass('paused');
+		control.removeClass('playing');
+		
 
 	});
 }
 
-function ctrlAudio(){
+function ctrlAudio(elem0, elem1){
 
-	jQuery('.story-screen__audio-ctrl').on('click', function(){
+	jQuery( elem0 ).on('click', function(){
 
-		var audioTrack = document.getElementById('audio-1'); 
+		var audioTrack = document.getElementById( elem1 ); 
 
 		if ( jQuery(this).hasClass('paused') ) {
 
@@ -126,6 +129,7 @@ box.style['height'] = "32px";
 
 function appCenter(){
 
+	/*
 	var app = jQuery('#app'),
 		winW = window.innerWidth,
 		storyW = document.getElementById('story-screen--0').offsetWidth;
@@ -134,18 +138,31 @@ function appCenter(){
 	console.log( winW );
 	console.log( storyW );
 	console.log( ( winW - storyW ) / 2 );
+	*/
+	var storyW = jQuery('.story-screen').width(),
+		winW = window.innerWidth;
+
+	jQuery('#app').css('margin-left', ( winW - storyW ) / 2 + 'px');
+
+	console.log(storyW, winW);
 
 }
-/*
+
+function fadeOutLoadingModal(){
+
+	jQuery('#loading-modal').fadeOut();
+}
+
 jQuery(window).on('load', function(){
 
-	appCenter();
+	
 });
-*/
+
 
 jQuery(document).ready(function(){
 
 	//pulsePosXY();
+	appCenter();
 	toggleText('#layer-cta-0', '#story-screen__text--0');
 	toggleText('#layer-cta-1', '#story-screen__text--1');
 	toggleText('#layer-cta-2', '#story-screen__text--2');
@@ -163,7 +180,7 @@ jQuery(document).ready(function(){
 	toggleText('#layer-cta-14', '#story-screen__text--14');
 	toggleText('#layer-cta-15', '#story-screen__text--15');
 	toggleText('#layer-cta-16', '#story-screen__text--16');
-	closeText('#story-screen__text__close--0', '#story-screen__text--0');
+	closeText('#story-screen__text__close--0', '#story-screen__text--0', 'audio-0', '#ctrl-0');
 	closeText('#story-screen__text__close--1', '#story-screen__text--1');
 	closeText('#story-screen__text__close--2', '#story-screen__text--2');
 	closeText('#story-screen__text__close--3', '#story-screen__text--3');
@@ -180,8 +197,9 @@ jQuery(document).ready(function(){
 	closeText('#story-screen__text__close--14', '#story-screen__text--14');
 	closeText('#story-screen__text__close--15', '#story-screen__text--15');
 	closeText('#story-screen__text__close--16', '#story-screen__text--16');
-	//ctrlAudio();
+	ctrlAudio('#ctrl-0', 'audio-0');
 	modalPosition();
+	fadeOutLoadingModal();
 	//appCenter();
 	//alert();
 });
@@ -190,6 +208,6 @@ jQuery(window).on('resize', function(){
 
 	//pulsePosXY();
 	modalPosition();
-	//appCenter();
+	appCenter();
 	
 });
