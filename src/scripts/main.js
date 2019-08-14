@@ -6,8 +6,9 @@ function toggleText(elem0, elem1){
 		//console.log('open');
 		//jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
 		event.preventDefault();
-		jQuery( elem1 ).animate({right: '-7px'}, 500);
-
+		//jQuery( elem1 ).animate({right: '-7px'}, 500);
+		
+		jQuery( elem1 ).fadeIn();
 		//alert('yay');
 
 	});
@@ -19,8 +20,8 @@ function closeText(elem0, elem1, elem2, elem3){
 
 		//console.log('closed');
 		//alert('closed');
-		jQuery( elem1).animate({right: '-400px'}, 300);
-
+		//jQuery( elem1).animate({right: '-400px'}, 300);
+		jQuery( elem1).fadeOut();
 		
 		var audioTrack = document.getElementById( elem2 ),
 			control = jQuery( elem3 );
@@ -127,27 +128,6 @@ box.style['height'] = "32px";
 */
 
 
-function appCenter(){
-
-	/*
-	var app = jQuery('#app'),
-		winW = window.innerWidth,
-		storyW = document.getElementById('story-screen--0').offsetWidth;
-
-	app.css('margin-left', ( winW - storyW ) / 2 + 'px');
-	console.log( winW );
-	console.log( storyW );
-	console.log( ( winW - storyW ) / 2 );
-	*/
-	var storyW = jQuery('.story-screen').width(),
-		winW = window.innerWidth;
-
-	jQuery('#app').css('margin-left', ( winW - storyW ) / 2 + 'px');
-
-	console.log(storyW, winW);
-
-}
-
 function fadeOutLoadingModal(){
 
 	jQuery('#loading-modal').fadeOut();
@@ -162,7 +142,7 @@ jQuery(window).on('load', function(){
 jQuery(document).ready(function(){
 
 	//pulsePosXY();
-	appCenter();
+	//appCenter();
 	toggleText('#layer-cta-0', '#story-screen__text--0');
 	toggleText('#layer-cta-1', '#story-screen__text--1');
 	toggleText('#layer-cta-2', '#story-screen__text--2');
@@ -200,14 +180,13 @@ jQuery(document).ready(function(){
 	ctrlAudio('#ctrl-0', 'audio-0');
 	modalPosition();
 	fadeOutLoadingModal();
-	//appCenter();
-	//alert();
+
 });
 
 jQuery(window).on('resize', function(){
 
 	//pulsePosXY();
 	modalPosition();
-	appCenter();
+
 	
 });

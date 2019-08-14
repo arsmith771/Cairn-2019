@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <meta name="description" content="">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css?v=1.2">
+  <style>
+
+.pulse-box {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: 12%;
+    top: 22%;
+}
+
+/* pulse in SVG */
+svg.pulse-svg {
+  overflow: visible;
+}
+svg.pulse-svg .first-circle, svg.pulse-svg .second-circle, svg.pulse-svg .third-circle, svg.pulse-svg .fourth-circle {
+  fill: #fff;
+  transform: scale(0.5);
+  opacity:0;
+  transform-origin: center center;
+  animation: pulse-me 3s linear infinite;
+}
+svg.pulse-svg .second-circle {
+  animation-delay: 1s;
+}
+svg.pulse-svg .third-circle {
+  animation-delay: 2s;
+}
+svg.pulse-svg .fourth-circle {
+  animation-delay: 2s;
+}
+
+/* pulse in CSS */
+.pulse-css {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: transparent;
+  position: relative;
+}
+
+@keyframes pulse-me {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+<div class="app" id="app">
+  <article class="story-screen">
+  	<div class="pulse-box">
+    	<svg class="pulse-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      		<circle class="first-circle" cx="20" cy="20" r="20"></circle>
+      		<circle class="second-circle" cx="20" cy="20" r="20"></circle>
+     		<circle class="third-circle" cx="20" cy="20" r="20"></circle>
+     		<circle class="fourth-circle" cx="20" cy="20" r="20"></circle>
+    	</svg>
+  	</div>
+     <div class="story-screen__text"><div class="story-screen__text__close"></div>
+    <div class="story-screen__text__inner">
+    	<h2 class="story-screen__text__header">Customer information and 
+participation</h2><p>84.2% feel that we are good at keeping them informed about our services and decisions. After staying the same for the last three years, this has dropped 3%. It compares with Scottish average of ??.</p><p>73.3% of tenants are satisfied with opportunities given to them to participate in our decision-making process. We have improved almost 5% since last year. However, we are still below the Scottish average of ??. We have completed a Scottish Government programme on tenant participation so we hope this figure will continue to improve.</p>
+    </div>
+    <div class="story-screen__audio-ctrl paused" id="ctrl"></div>
+    </div>
+    
+    <audio id="audio-1">
+  		<source src="audio/mediation-interview.mp3" type="audio/mpeg">
+  		Your browser does not support the audio element.
+	</audio>	
+	</article>
+   <article class="story-screen">
+    <div class="pulse-box">
+      <svg class="pulse-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <circle class="first-circle" cx="20" cy="20" r="20"></circle>
+          <circle class="second-circle" cx="20" cy="20" r="20"></circle>
+        <circle class="third-circle" cx="20" cy="20" r="20"></circle>
+        <circle class="fourth-circle" cx="20" cy="20" r="20"></circle>
+      </svg>
+    </div>
+    <div class="story-screen__text"><div class="story-screen__text__close"></div>
+    <div class="story-screen__text__inner">
+      <h2 class="story-screen__text__header">Customer information and 
+participation</h2><p>84.2% feel that we are good at keeping them informed about our services and decisions. After staying the same for the last three years, this has dropped 3%. It compares with Scottish average of ??.</p><p>73.3% of tenants are satisfied with opportunities given to them to participate in our decision-making process. We have improved almost 5% since last year. However, we are still below the Scottish average of ??. We have completed a Scottish Government programme on tenant participation so we hope this figure will continue to improve.</p>
+    </div>
+    <div class="story-screen__audio-ctrl paused" id="ctrl"></div>
+    </div>
+    
+    <audio id="audio-1">
+      <source src="audio/mediation-interview.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>  
+  </article>
+   <article class="story-screen">
+    <div class="pulse-box">
+      <svg class="pulse-svg" width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <circle class="first-circle" cx="20" cy="20" r="20"></circle>
+          <circle class="second-circle" cx="20" cy="20" r="20"></circle>
+        <circle class="third-circle" cx="20" cy="20" r="20"></circle>
+        <circle class="fourth-circle" cx="20" cy="20" r="20"></circle>
+      </svg>
+    </div>
+    <div class="story-screen__text"><div class="story-screen__text__close"></div>
+    <div class="story-screen__text__inner">
+      <h2 class="story-screen__text__header">Customer information and 
+participation</h2><p>84.2% feel that we are good at keeping them informed about our services and decisions. After staying the same for the last three years, this has dropped 3%. It compares with Scottish average of ??.</p><p>73.3% of tenants are satisfied with opportunities given to them to participate in our decision-making process. We have improved almost 5% since last year. However, we are still below the Scottish average of ??. We have completed a Scottish Government programme on tenant participation so we hope this figure will continue to improve.</p>
+    </div>
+    <div class="story-screen__audio-ctrl paused" id="ctrl"></div>
+    </div>
+    
+    <audio id="audio-1">
+      <source src="audio/mediation-interview.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>  
+  </article>
+</div>
+
+<!--<footer class="footer"><p class="footer__inner">Text here TBC</p></footer>-->
+<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="scripts/main.min.js?v=1.2"></script>
+<script>
+    const gra = function(min, max) {
+    return Math.random() * (max - min) + min;
+};
+const init = function() {
+    let items = document.querySelectorAll("li");
+    for (let i = 0; i < items.length; i++) {
+        items[i].style.minHeight = gra(120, 205) + "vh";
+       // items[i].style.background = randomColor({ luminosity: "light" });
+    }
+
+    cssScrollSnapPolyfill();
+};
+init();
+}
+</script>
+</body>
+</html>
