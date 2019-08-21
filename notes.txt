@@ -33,4 +33,15 @@ mid-sept launch
 
 <p>ANCHO tenants voted overwhelmingly in favour of a new partnership with Cairn, 94% of votes were in favour on a turnout of 61%.</p>
 
+.div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+@supports ( scroll-snap-type: y mandatory) {
+    .div {
+        background-color: green;
+    }
+}
+
 
