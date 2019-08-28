@@ -1,18 +1,18 @@
-function toggleText(elem0, elem1){
+/*
 
-	//jQuery('.text-cta').on('click', function(){
+ function toggleText(elem0, elem1){
+
+
 	jQuery(document).on('click', elem0, function(event){
-		//alert('open');
-		//console.log('open');
-		//jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').animate({right: '-7px'}, 500);
-		event.preventDefault();
-		//jQuery( elem1 ).animate({right: '-7px'}, 500);
+	event.preventDefault();
+	
 		
 		jQuery( elem1 ).fadeIn();
-		//alert('yay');
+
 
 	});
 }
+*/
 
 function closeText(elem0, elem1, elem2, elem3){
 
@@ -71,66 +71,60 @@ function modalPosition(){
 	}
 }
 
-function pulsePosXY(){
-
-	function getOffset(element) {
-  		
-  		var bound = element.getBoundingClientRect(),
-  			html = document.documentElement;
-
-  		return {
-    		top: bound.top + window.pageYOffset - html.clientTop,
-    		left: bound.left + window.pageXOffset - html.clientLeft
-  		};
-	}
-
-var svg = document.getElementsByTagName('svg')[0];
-var offset = getOffset(svg);
-
-
-var x = offset.left;
-var y = offset.top;
-
-/*
-var box = document.createElement('div');
-box.style['position'] = "absolute";
-box.style['left'] = offset.left + "px";
-box.style['top'] = offset.top + "px";
-box.style['background-color'] = "blue";
-box.style['width'] = "32px";
-box.style['height'] = "32px";
-*/
-
-//document.body.appendChild(box);
-
-	//console.log('x = ' + x +', y = ' + y); 
-
-}
-
-/*function scrollSnapPoly(){
-
-	const gra = function(min, max) {
-    return Math.random() * (max - min) + min;
-	};
-	const init = function() {
-    let items = document.querySelectorAll("article");
-    for (let i = 0; i < items.length; i++) {
-        items[i].style.minHeight = gra(120, 205) + "vh";
-       // items[i].style.background = randomColor({ luminosity: "light" });
-    }
-
-    cssScrollSnapPolyfill();
-
-	};
-
-	init();
-}
-*/
-
 
 function fadeOutLoadingModal(){
 
 	jQuery('#loading-modal').fadeOut();
+}
+
+function toggleTextLayer(){
+
+	jQuery('.text-cta').on('click', function(){
+
+		console.log('clicked');
+
+		jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').fadeIn();
+
+	})
+}
+
+function isElementinViewPort2(){
+
+   jQuery('.story-screen').each(function(index){
+
+      var screen = document.getElementById('story-screen--' + index),
+          rect = screen.getBoundingClientRect();
+
+      if ( ( rect.top >= -100 ) && ( rect.top < 100 ) ) {
+
+        jQuery(this).addClass('animate');
+
+      } else {
+
+        jQuery(this).removeClass('animate');
+      }
+      //console.log(screen);
+
+   });
+}
+
+function screenBorders(){
+
+	var winW = window.innerWidth,
+		article = jQuery('.story-screen'),
+		article0 = article.eq(0),
+		articleWidth = article0.width();
+
+	console.log(articleWidth + 60, winW)
+
+	if ( ( articleWidth + 60) <= winW ){
+
+		article.addClass('story-screen--with-border');
+
+	} else {
+
+		article.removeClass('story-screen--with-border');
+	}
 }
 
 jQuery(window).on('load', function(){
@@ -139,11 +133,20 @@ jQuery(window).on('load', function(){
 });
 
 
+jQuery('#app').on('scroll', function(){
+
+    isElementinViewPort2();
+});
+
 jQuery(document).ready(function(){
+
+	screenBorders();
+	toggleTextLayer();
+	isElementinViewPort2();
 
 	//pulsePosXY();
 	//appCenter();
-	toggleText('#layer-cta-0', '#story-screen__text--0');
+	/* toggleText('#layer-cta-0', '#story-screen__text--0');
 	toggleText('#layer-cta-1', '#story-screen__text--1');
 	toggleText('#layer-cta-2', '#story-screen__text--2');
 	toggleText('#layer-cta-3', '#story-screen__text--3');
@@ -159,7 +162,7 @@ jQuery(document).ready(function(){
 	toggleText('#layer-cta-13', '#story-screen__text--13');
 	toggleText('#layer-cta-14', '#story-screen__text--14');
 	toggleText('#layer-cta-15', '#story-screen__text--15');
-	toggleText('#layer-cta-16', '#story-screen__text--16');
+	toggleText('#layer-cta-16', '#story-screen__text--16'); */
 	closeText('#story-screen__text__close--0', '#story-screen__text--0', 'audio-0', '#ctrl-0');
 	closeText('#story-screen__text__close--1', '#story-screen__text--1');
 	closeText('#story-screen__text__close--2', '#story-screen__text--2');
@@ -186,6 +189,7 @@ jQuery(document).ready(function(){
 jQuery(window).on('resize', function(){
 
 	//pulsePosXY();
+	screenBorders();
 	modalPosition();
 
 	

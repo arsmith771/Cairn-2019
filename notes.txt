@@ -45,3 +45,29 @@ mid-sept launch
 }
 
 
+Make the size of the Scottish map pulse smaller DONE
+
+Make the speed of the dog slower. There’s also an issue with the poo being right at the edge of the screen when it pulses on my phone screen so maybe we should move the dog slightly further up the page? DONE
+
+Feel like we’ve used pulsing vans quite often so maybe change the one where the van is pulsing with the bath in the back of it, to the oven pulsing. Since it’s more in the background of the scene, the pulse should probably be fairly large DONE
+
+SHQS rosette – make pulse smaller DONE
+
+The view of the Cairn member of staff sitting in the call centre stops for me just under the table top (on my phone) so is it worth moving her and the table up slightly so you can see more of the table? Can provide a screenshot of what I’m seeing if you’d like
+
+Seagull in the allotment is great but the colour of his beak is blending into the colour of the house. Can we change his beak to yellow or change the colour of the house? DONE
+
+In the scene with the champagne, can we change the spelling to champagne rather than champaign, and can we make the van blank? (Kitchens and bathrooms are another service so don’t want to confuse people and probably don’t need the word Cairn three times on the same screen!)
+
+Also, should the mans hand pulse with the bottle? It’s currently static so looks a bit weird?
+
+Make the man with the spade in his hand pulse smaller DONE
+
+
+-----------
+
+1) Remove css ftom html, minimise, refer as external file (main.css)
+2) Add minimised nornalize css to main.css
+3) scripts - comment out unused, add function to hide/show (just show?) text content layers.
+
+
