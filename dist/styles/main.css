@@ -6,6 +6,10 @@
 *:focus{
   outline:none;
 }
+[data-whatintent='keyboard'] *:focus {
+  outline: 2px dashed orange;
+  outline-offset: 7px
+}
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #EDE8DB;

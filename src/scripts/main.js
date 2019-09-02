@@ -79,11 +79,20 @@ function fadeOutLoadingModal(){
 
 function toggleTextLayer(){
 
-	jQuery('.text-cta').on('click', function(){
+	jQuery('.text-cta').on('click', function(e){
 
-		console.log('clicked');
+			jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').fadeIn();
+			console.log('clicked');
 
-		jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').fadeIn();
+	})
+
+	jQuery('.text-cta').on('keypress', function(e){
+
+		if (e.which == 13) {
+
+			jQuery(this).closest('.story-screen__graphic').siblings('.story-screen__text').fadeIn();
+
+		}
 
 	})
 }
