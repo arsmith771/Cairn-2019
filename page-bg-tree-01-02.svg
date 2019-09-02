@@ -1,0 +1,53 @@
+<svg id="a8a1793b-35ab-4fd1-b5cd-7a3cb0208987" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.12 81.69">
+  <defs>
+    <style>
+      .a454ac4a-fd80-4317-ada1-ab3da7519cfb {
+        fill: #ede8db;
+      }
+
+      .a432cc95-e629-4a96-85ad-ef7727a839b4, .e67681b2-eaa8-4f9d-9edf-9becc5eaba81, .f2032341-1c64-42a5-afe8-c6ce6bb68a50 {
+        fill: none;
+      }
+
+      .f2032341-1c64-42a5-afe8-c6ce6bb68a50 {
+        stroke: #ea5736;
+        stroke-miterlimit: 10;
+        stroke-width: 2.66px;
+      }
+
+      .a2477906-4d36-4662-aaf5-707b128cc13d, .a432cc95-e629-4a96-85ad-ef7727a839b4, .e67681b2-eaa8-4f9d-9edf-9becc5eaba81, .f2032341-1c64-42a5-afe8-c6ce6bb68a50 {
+        stroke-linecap: round;
+      }
+
+      .a2477906-4d36-4662-aaf5-707b128cc13d {
+        fill: #3d5845;
+      }
+
+      .a2477906-4d36-4662-aaf5-707b128cc13d, .a432cc95-e629-4a96-85ad-ef7727a839b4, .e67681b2-eaa8-4f9d-9edf-9becc5eaba81 {
+        stroke: #3d5843;
+        stroke-linejoin: round;
+      }
+
+      .a2477906-4d36-4662-aaf5-707b128cc13d, .e67681b2-eaa8-4f9d-9edf-9becc5eaba81 {
+        stroke-width: 9.3px;
+      }
+
+      .a432cc95-e629-4a96-85ad-ef7727a839b4 {
+        stroke-width: 16.61px;
+      }
+    </style>
+  </defs>
+  <title>page-bg-tree-01</title>
+  <rect class="a454ac4a-fd80-4317-ada1-ab3da7519cfb" x="-62.12" y="-453.3" width="841.89" height="601.07"/>
+  <g>
+    <line class="f2032341-1c64-42a5-afe8-c6ce6bb68a50" x1="22.56" y1="80.36" x2="22.56" y2="46.82"/>
+    <g>
+      <polyline class="a2477906-4d36-4662-aaf5-707b128cc13d" points="29.97 12.06 22.56 4.65 15.15 12.06"/>
+      <polyline class="a2477906-4d36-4662-aaf5-707b128cc13d" points="32.6 25.05 22.56 15.01 12.52 25.05"/>
+      <polyline class="a2477906-4d36-4662-aaf5-707b128cc13d" points="35.22 38.03 22.56 25.37 9.9 38.03"/>
+      <polyline class="a2477906-4d36-4662-aaf5-707b128cc13d" points="37.85 51.02 22.56 35.73 7.28 51.02"/>
+      <polyline class="e67681b2-eaa8-4f9d-9edf-9becc5eaba81" points="40.47 64 22.56 46.09 4.65 64"/>
+    </g>
+    <line class="a432cc95-e629-4a96-85ad-ef7727a839b4" x1="22.56" y1="51.15" x2="22.56" y2="64"/>
+  </g>
+</svg>

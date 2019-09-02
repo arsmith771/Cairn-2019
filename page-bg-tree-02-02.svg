@@ -1,0 +1,52 @@
+<svg id="a2eb5193-3672-4ba6-9e47-976f5b9b53b2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.64 78.47">
+  <defs>
+    <style>
+      .a6e29968-213a-4f7d-8153-3e7f0279a614 {
+        fill: #ede8db;
+      }
+
+      .a9aaffa3-f493-4490-a8d8-8e8fbbda1823 {
+        fill: #89563c;
+      }
+
+      .b643abbc-751b-4725-a12f-1a19a0df4260, .f68c20ad-d2e6-4272-b79c-42ef483db88f {
+        fill: none;
+        stroke: #ea5736;
+        stroke-miterlimit: 10;
+      }
+
+      .f68c20ad-d2e6-4272-b79c-42ef483db88f {
+        stroke-width: 4.79px;
+      }
+
+      .b643abbc-751b-4725-a12f-1a19a0df4260 {
+        stroke-linecap: round;
+        stroke-width: 2.05px;
+      }
+
+      .a2e53c1b-5eb9-4046-91de-1c72535a68de {
+        fill: #a2a081;
+      }
+    </style>
+  </defs>
+  <title>page-bg-tree-02</title>
+  <rect class="a6e29968-213a-4f7d-8153-3e7f0279a614" x="-639.12" y="-63.76" width="841.89" height="601.07"/>
+  <g>
+    <ellipse class="a9aaffa3-f493-4490-a8d8-8e8fbbda1823" cx="26.82" cy="74.5" rx="10.91" ry="3.97"/>
+    <g>
+      <line class="f68c20ad-d2e6-4272-b79c-42ef483db88f" x1="26.88" y1="73.92" x2="26.88" y2="38.45"/>
+      <path class="b643abbc-751b-4725-a12f-1a19a0df4260" d="M17.75,40.73s.82,9.17,9.13,12.52"/>
+      <path class="b643abbc-751b-4725-a12f-1a19a0df4260" d="M35.86,37.19S34.77,48,26.88,48"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="37.33" cy="35.79" r="7.13"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="42.33" cy="16.43" r="7.13"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="12.77" cy="17.14" r="8.53"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="26.19" cy="37.89" r="5.56"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="44.46" cy="28.02" r="9.18"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="8.21" cy="28.02" r="8.21"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="23.22" cy="12.23" r="12.23"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="32.36" cy="13.98" r="9.78"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="25.19" cy="26.21" r="12.23"/>
+      <circle class="a2e53c1b-5eb9-4046-91de-1c72535a68de" cx="16.3" cy="35.79" r="7.12"/>
+    </g>
+  </g>
+</svg>

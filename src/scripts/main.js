@@ -117,19 +117,208 @@ function screenBorders(){
 
 	console.log(articleWidth + 60, winW)
 
-	if ( ( articleWidth + 60) <= winW ){
+	if ( ( articleWidth + 60) <= winW ){ // if the article("screen") width is less than or equal to the viewport width
 
-		article.addClass('story-screen--with-border');
+		article.addClass('story-screen--with-border'); // add left/right borders to screens
+		jQuery('body').addClass('body--with-graphics'); // add graphics to page background
+
+
 
 	} else {
 
 		article.removeClass('story-screen--with-border');
+		jQuery('body').removeClass('body--with-graphics');
 	}
 }
 
+function leafAnim(){
+
+// browser detect
+var BrowserDetect = {
+        init: function() {
+		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+		this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+		this.OS = this.searchString(this.dataOS) || "an unknown OS";
+	},
+	searchString: function(data) {
+		for (var i = 0; i < data.length; i++) {
+			var dataString = data[i].string;
+			var dataProp = data[i].prop;
+			this.versionSearchString = data[i].versionSearch || data[i].identity;
+			if (dataString) {
+				if (dataString.indexOf(data[i].subString) != -1) return data[i].identity;
+			} else if (dataProp) return data[i].identity;
+		}
+	},
+	searchVersion: function(dataString) {
+		var index = dataString.indexOf(this.versionSearchString);
+		if (index == -1) return;
+		return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+	},
+	dataBrowser: [{
+		string: navigator.userAgent,
+		subString: "Chrome",
+		identity: "Chrome"
+	}, {
+		string: navigator.userAgent,
+		subString: "OmniWeb",
+		versionSearch: "OmniWeb/",
+		identity: "OmniWeb"
+	}, {
+		string: navigator.vendor,
+		subString: "Apple",
+		identity: "Safari",
+		versionSearch: "Version"
+	}, {
+		prop: window.opera,
+		identity: "Opera",
+		versionSearch: "Version"
+	}, {
+		string: navigator.vendor,
+		subString: "iCab",
+		identity: "iCab"
+	}, {
+		string: navigator.vendor,
+		subString: "KDE",
+		identity: "Konqueror"
+	}, {
+		string: navigator.userAgent,
+		subString: "Firefox",
+		identity: "Firefox"
+	}, {
+		string: navigator.vendor,
+		subString: "Camino",
+		identity: "Camino"
+	}, { // for newer Netscapes (6+)
+		string: navigator.userAgent,
+		subString: "Netscape",
+		identity: "Netscape"
+	}, {
+		string: navigator.userAgent,
+		subString: "MSIE",
+		identity: "Explorer",
+		versionSearch: "MSIE"
+	}, {
+		string: navigator.userAgent,
+		subString: "Gecko",
+		identity: "Mozilla",
+		versionSearch: "rv"
+	}, { // for older Netscapes (4-)
+		string: navigator.userAgent,
+		subString: "Mozilla",
+		identity: "Netscape",
+		versionSearch: "Mozilla"
+	}],
+	dataOS: [{
+		string: navigator.platform,
+		subString: "Win",
+		identity: "Windows"
+	}, {
+		string: navigator.platform,
+		subString: "Mac",
+		identity: "Mac"
+	}, {
+		string: navigator.userAgent,
+		subString: "iPhone",
+		identity: "iPhone/iPod"
+	}, {
+		string: navigator.platform,
+		subString: "Linux",
+		identity: "Linux"
+	}]
+
+};
+BrowserDetect.init();
+
+if ( !( BrowserDetect.browser === 'Safari' && BrowserDetect.version < 9 ) )  {
+		
+
+		// Define the type of leaves (to match with various CSS classes)
+var leafColours = ['red-leaf', 'brown-leaf', 'yellow-leaf', 'green-leaf'];
+var leafMovements = ['small-move', 'medium-move', 'large-move', 'large-move'];
+var MAX_LEAVES = 6;
+var container = document.querySelector('.container');
+var leafCounter = 0;
+setInterval( function() {
+  // Don't do anything if window not in focus
+  var narrowScreen = jQuery('.body--with-graphics').length;
+
+if( (document.visibilityState === 'hidden') || ( narrowScreen < 1) ){
+    console.info('Browser not in focus, so we will not generate new leaves');
+    return;
+  }
+  // Some garbage cleaning first up
+  if(leafCounter > MAX_LEAVES){
+    // Remove oldest leave once we hit the max limit;
+    console.info(`Limit reached on number of leaves  (${MAX_LEAVES}), so we are culling the oldest one...`);
+  container.removeChild(container.querySelector('.leaf'));
+  }
+  // Create a leaf div
+  var leaf = document.createElement('div');
+  
+  // Randomly select leaf colour
+  var selectedLeafColour = Math.floor(Math.random() * leafColours.length);
+  leaf.classList.add(leafColours[selectedLeafColour]);
+  
+  // Randomly select leaf type
+  var selectedLeafMovement = Math.floor(Math.random() * leafMovements.length);
+  leaf.classList.add(leafMovements[selectedLeafMovement]);
+  
+  // Create supporting structure for leaf
+  leaf.classList.add('leaf');
+  var yAxis = document.createElement('div');
+  yAxis.classList.add('y-axis');
+  var xAxis = document.createElement('div');
+  xAxis.classList.add('x-axis');
+  
+  yAxis.appendChild(xAxis);
+  leaf.appendChild(yAxis);
+  
+  // Set random x-axis starting position
+  var horizontalPosition = Math.random() * window.innerWidth;
+  leaf.style.position = 'absolute';
+  leaf.style.left = `${horizontalPosition}px`;
+  
+  // Set to start slightly off top of screen
+  var verticalPosition = -25;
+  leaf.style.top = `${verticalPosition}vh`;
+  container.appendChild(leaf);
+  
+  // Increment leaf counter
+  leafCounter++;
+}, 1000)
+
+
+}
+}
+
+
+function addFooter(){
+
+	jQuery('.story-screen').not('.story-screen--10, .story-screen--16, .story-screen--15, .story-screen--13, .story-screen--11').each(function(){
+
+		var jThis = jQuery(this),
+			articleH = jThis.height(),
+			svgH = jThis.find('.story-screen__graphic').height(),
+			footer = jThis.find('.story-screen--footer').length;
+
+		if ( ( articleH < svgH ) && ( footer < 1 ) ) {
+
+			jThis.append('<div class="story-screen--footer" />');
+
+		} else if ( articleH >= svgH )  {
+
+			jThis.find('.story-screen--footer').remove();
+
+		}
+
+	});
+}
+
+
 jQuery(window).on('load', function(){
 
-	
+	leafAnim();
 });
 
 
@@ -143,6 +332,7 @@ jQuery(document).ready(function(){
 	screenBorders();
 	toggleTextLayer();
 	isElementinViewPort2();
+	addFooter();
 
 	//pulsePosXY();
 	//appCenter();
@@ -191,6 +381,7 @@ jQuery(window).on('resize', function(){
 	//pulsePosXY();
 	screenBorders();
 	modalPosition();
+	//addFooter();
 
 	
 });

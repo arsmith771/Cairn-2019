@@ -1,0 +1,53 @@
+<svg id="a5885a24-97c8-4e2a-ab03-dec7c8bb92b2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.63 97.08">
+  <defs>
+    <style>
+      .f66c48f4-662c-4664-8ef0-35b3b4c3a793 {
+        fill: #ede8db;
+      }
+
+      .b23c538b-3483-485b-b713-674b65fbdbf0, .b3f4d368-f339-45f7-8903-0ef82a6b07ec, .f54799ee-bcd8-402d-b7c9-c86b1fae9950 {
+        fill: none;
+      }
+
+      .f54799ee-bcd8-402d-b7c9-c86b1fae9950 {
+        stroke: #ea5736;
+        stroke-miterlimit: 10;
+        stroke-width: 3.16px;
+      }
+
+      .b23c538b-3483-485b-b713-674b65fbdbf0, .b3f4d368-f339-45f7-8903-0ef82a6b07ec, .f54799ee-bcd8-402d-b7c9-c86b1fae9950, .fe367b53-27b1-44ce-8db7-8ba8b108eb1e {
+        stroke-linecap: round;
+      }
+
+      .fe367b53-27b1-44ce-8db7-8ba8b108eb1e {
+        fill: #3d5845;
+      }
+
+      .b23c538b-3483-485b-b713-674b65fbdbf0, .b3f4d368-f339-45f7-8903-0ef82a6b07ec, .fe367b53-27b1-44ce-8db7-8ba8b108eb1e {
+        stroke: #d5a655;
+        stroke-linejoin: round;
+      }
+
+      .b3f4d368-f339-45f7-8903-0ef82a6b07ec, .fe367b53-27b1-44ce-8db7-8ba8b108eb1e {
+        stroke-width: 11.05px;
+      }
+
+      .b23c538b-3483-485b-b713-674b65fbdbf0 {
+        stroke-width: 19.74px;
+      }
+    </style>
+  </defs>
+  <title>page-bg-tree-03-02</title>
+  <rect class="f66c48f4-662c-4664-8ef0-35b3b4c3a793" x="-622.96" y="-457.68" width="841.89" height="601.07"/>
+  <g>
+    <line class="f54799ee-bcd8-402d-b7c9-c86b1fae9950" x1="26.81" y1="95.5" x2="26.81" y2="55.64"/>
+    <g>
+      <polyline class="fe367b53-27b1-44ce-8db7-8ba8b108eb1e" points="35.62 14.34 26.81 5.53 18 14.34"/>
+      <polyline class="fe367b53-27b1-44ce-8db7-8ba8b108eb1e" points="38.74 29.77 26.81 17.84 14.88 29.77"/>
+      <polyline class="fe367b53-27b1-44ce-8db7-8ba8b108eb1e" points="41.86 45.2 26.81 30.15 11.77 45.2"/>
+      <polyline class="fe367b53-27b1-44ce-8db7-8ba8b108eb1e" points="44.98 60.63 26.81 42.47 8.65 60.63"/>
+      <polyline class="b3f4d368-f339-45f7-8903-0ef82a6b07ec" points="48.1 76.07 26.81 54.78 5.53 76.07"/>
+    </g>
+    <line class="b23c538b-3483-485b-b713-674b65fbdbf0" x1="26.81" y1="60.79" x2="26.81" y2="76.07"/>
+  </g>
+</svg>

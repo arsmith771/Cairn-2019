@@ -238,7 +238,7 @@ main {
 }
 .animate .text-cta--7{
   animation: pulseSeven 1.7s infinite;
-  transform-origin: 25% 30%;
+  transform-origin: 25% 37%;
   cursor:pointer;
 }
 .animate .text-cta--8{
@@ -263,7 +263,7 @@ main {
 }
 .animate .text-cta--12{
   animation: pulseTwelve 1.7s infinite;
-  transform-origin: 15% 49%;
+  transform-origin: 15% 46%;
   cursor:pointer;
 }
 .animate .text-cta--13{
@@ -291,6 +291,13 @@ main {
   transform-origin: 50% 30%;
   cursor:pointer;
 }
+.body--with-graphics{
+  background-image:url('../images/page-bg-tree-01-02.svg'), url('../images/page-bg-01-02.svg'), url('../images/page-bg-tree-02-02.svg'), url('../images/page-bg-04-05-05.svg');
+  background-position: 5% 90%, 15% 30%, 90% 5%, 90% 90%;
+  background-size: auto 20%, auto 35%, auto 12%, auto 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .loading-modal{
   display:block;
   position:fixed;
@@ -301,6 +308,12 @@ main {
   z-index: 5;
   background-color:orange;
 }
+
+
+.container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1; overflow: hidden;}@keyframes side-to-side-small{0%{transform:translatex(0) rotate(-90deg)}50%{transform:translatex(-2vw)}100%{transform:translatex(0) rotate(-90deg)}}@keyframes side-to-side-medium{0%{transform:translatex(0) rotate(-120deg)}50%{transform:translatex(-4vw)}100%{transform:translatex(0) rotate(-120deg)}}@keyframes side-to-side-large{0%{transform:translatex(0) rotate(250deg)}50%{transform:translatex(-6vw)}100%{transform:translatex(0) rotate(250deg)}}@keyframes fall{100%{transform:translatey(123vh)}}.leaf .x-axis{width:2vmax;height:2vmax;border-top-left-radius:5vmax;border-bottom-left-radius:5vmax;border-bottom-right-radius:.1vmax;border-top-right-radius:5vmax}.brown-leaf .x-axis{background-image:url(../images/leaf-1.svg);background-size:100% auto}.red-leaf .x-axis{background-image:url(../images/leaf-2.svg)}.yellow-leaf .x-axis{background-image:url(../images/leaf-3.svg)}.green-leaf .x-axis{background-image:url(../images/leaf-4.svg)}.small-move .x-axis{animation:side-to-side-small 4s cubic-bezier(.48,0,.46,1) 3.5 forwards}.medium-move .x-axis{animation:side-to-side-medium 10s cubic-bezier(.48,0,.46,1) 5.05 forwards}.large-move .x-axis{animation:side-to-side-large 8s cubic-bezier(.48,0,.46,1) 3.05 forwards}.leaf .y-axis{animation:fall 8s ease-out forwards}
+
+
+
 .app {
 
   height: 100vh;
@@ -314,6 +327,9 @@ main {
   -webkit-overflow-scrolling: touch; /* important for iOS */ 
   scroll-snap-type: y mandatory; /* Chrome Canary */  
   scroll-snap-type: mandatory; /* Firefox */   
+
+  position: relative;
+  z-index: 2;
   
 }
 
@@ -328,19 +344,59 @@ main {
   margin-right:auto;
   background-color:#AEAAA1;
 }
+
+.intro-modal {
+
+   display:none;
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  /*  */
 
-  .story-screen{
-    overflow:hidden;
-  }
-  .text-cta{
-    outline:1px dotted black !important;
-  }
+    .story-screen{
+      overflow:hidden;
+    }
+    .text-cta{
+      outline:1px dotted black !important;
+    }
+    .intro-modal {
+      display:block;
+      position: absolute;
+      top:0;
+      left:0;
+      bottom: 0;
+      right: 0;
+      z-index: 10;
+      background-color: #EDE8DB;
+      color: #3C5743;
+    }
+    .intro-modal__logo{
+      max-width:400px;
+      margin:0 auto;
+      display: block;
+    }
+    .intro-modal__inner{
+      max-width:400px;
+      margin:0 auto;
+      font-size:1.2em;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .intro-modal__inner__header{
+      font-size:1.8em;
+      line-height: 1.1;
+    }
+    .intro-modal__inner a {
+      color: #3C5743;
+    }
 }
 .story-screen--with-border{
   border-left: 20px solid white;
   border-right: 20px solid white;
   box-sizing: content-box;
+}
+.story-screen--footer{
+  background-color:#AEAAA1;
+  position:absolute; bottom:0; left:0; right:0; height:3%; z-index:2;
 }
 .story-screen:nth-child(11){
     background-color: #fff;
@@ -349,21 +405,28 @@ main {
     background-color: #3C5743;
   }
   .story-screen:nth-child(14),
-  .story-screen:last-child {
+  .story-screen:nth-last-child(2) {
     background-color: #EDE8DB;
+  }
+  .story-screen:nth-last-child(1) .last-screen-inner {
+      padding:10%;
+      color:#fff;
+      font-size: 1.2em;
+  }
+  .story-screen:nth-last-child(1) .last-screen-inner h2{
+      font-size: 1.3em;
   }
 
 .story-screen__text {
     display:none;
     position:absolute;
-    z-index: 2;
+    z-index: 3;
     top:2%;
     padding:5% 0 80px 5%;
     min-height: 50%; 
     /*right:-400px;*/
     right:0;
     width:320px;
-    z-index: 1;
     background-color: #EDE8DB;
     border:6px solid #EA5736;
     border-radius: 20px 0 0 20px;
