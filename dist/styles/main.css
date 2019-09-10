@@ -409,14 +409,52 @@ main {
     background-color: #3C5743;
   }
   .story-screen:nth-child(14),
-  .story-screen:nth-last-child(2) {
+  .story-screen:nth-last-child(2),
+  .story-screen:nth-last-child(1) {
     background-color: #EDE8DB;
   }
-  .story-screen:nth-last-child(1) .last-screen-inner {
-      padding:10%;
-      color:#fff;
-      font-size: 1.2em;
+  .story-screen:nth-last-child(1){
+    background-image: url('../images/last-screen-03.svg');
+      background-repeat:no-repeat;
+      background-position:50% 100%;
+      background-size: 70% auto;
   }
+
+  
+  .story-screen:nth-last-child(1) .last-screen-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 1.15em;
+      line-height: 1.4;
+      overflow: auto;
+      
+  }
+  .story-screen--with-border.story-screen:nth-last-child(1) .last-screen-inner{
+
+      top: 0;
+      left: 8%;
+      bottom: 8%;
+      right: 8%;
+  }
+  .last-screen-inner-inner{
+      background: rgba(237, 232, 219, 0.85);
+      height: auto;
+      padding:8%;
+  }
+  .story-screen:nth-last-child(1) .last-screen-inner a {
+      color:#EA5736;
+      text-decoration:none;
+      font-weight: 600;
+
+  } 
+  .story-screen:nth-last-child(1) .last-screen-inner a:hover {
+      text-decoration:underline;
+  }
+
+  
   .story-screen:nth-last-child(1) .last-screen-inner h2{
       font-size: 1.3em;
   }
@@ -491,4 +529,16 @@ main {
   height:40px;
   background-color: red;
   cursor:pointer;
+}
+
+@media only screen and (min-width:1920px) and (orientation: landscape) {
+
+  .story-screen:nth-last-child(1) .last-screen-inner {
+  
+
+      font-size: 1.15vw;
+    
+      
+  }
+  
 }
