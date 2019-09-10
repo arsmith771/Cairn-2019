@@ -432,17 +432,24 @@ main {
       overflow: auto;
       
   }
-  .story-screen--with-border.story-screen:nth-last-child(1) .last-screen-inner{
+  .story-screen--with-border.story-screen:nth-last-child(1) .last-screen-inner {
 
       top: 0;
       left: 8%;
       bottom: 8%;
-      right: 8%;
+      right: 0%;
   }
+
   .last-screen-inner-inner{
       background: rgba(237, 232, 219, 0.85);
       height: auto;
       padding:8%;
+  }
+
+  .story-screen--with-border.story-screen:nth-last-child(1) .last-screen-inner-inner{
+      
+      padding:8% 16% 0 8%;
+
   }
   .story-screen:nth-last-child(1) .last-screen-inner a {
       color:#EA5736;
@@ -472,6 +479,9 @@ main {
     background-color: #EDE8DB;
     border:6px solid #EA5736;
     border-radius: 20px 0 0 20px;
+}
+.no-js .story-screen__text{
+    display:block;
 }
 .story-screen__text__header{
   line-height: 1.3;
