@@ -425,7 +425,7 @@ main {
       position: absolute;
       top: 0;
       left: 0;
-      bottom: 0;
+      bottom: 100px;
       right: 0;
       font-size: 1.15em;
       line-height: 1.4;
@@ -436,7 +436,7 @@ main {
 
       top: 0;
       left: 8%;
-      bottom: 8%;
+      bottom: 100px;
       right: 0%;
   }
 
@@ -503,6 +503,8 @@ main {
       display:block;
       width:30px;
       height:30px;
+      overflow: hidden;
+      text-indent: -999em;
       background-color: #EDE8DB;
       background-repeat: no-repeat;
       background-size: contain;
@@ -524,6 +526,11 @@ main {
     height:50px;
     background-repeat: no-repeat;
     background-size: contain;
+    text-indent: -999em;
+    overflow: hidden;
+  }
+  .story-screen__audio-ctrl--last{
+    bottom:30px;
   }
   .story-screen__audio-ctrl.paused {
       background-image: url("data:image/svg+xml,%3Csvg id='a87be89d-000a-4447-999e-2af5f0de46ad' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 124.71 114.42'%3E%3Cdefs%3E%3Cstyle%3E.bcd210f3-7090-4cdb-b350-a4c0c49f9791,.fa0e2601-7e93-47db-b244-335d5f1ab316%7Bfill:%23ede8db;%7D.b7637181-f8db-4f50-8ca3-226bc60a70db%7Bfill:%233c5743;%7D.fa83fd7e-f749-40db-a6ef-0ee0ecd426a6%7Bfill:%23aeaaa1;%7D.bd3d26b0-4deb-481e-9e6c-8b536fa5d6fa%7Bfill:%234d4d4c;%7D.bcd210f3-7090-4cdb-b350-a4c0c49f9791%7Bstroke:%23ea5736;stroke-miterlimit:10;stroke-width:6px;%7D.fdd236b3-5da3-4639-9bdb-09c2f292e26a%7Bfill:%23ea5736;%7D%3C/style%3E%3C/defs%3E%3Crect class='fa0e2601-7e93-47db-b244-335d5f1ab316' x='-199.56' y='-640.61' width='465.11' height='2577.36'/%3E%3Cpolygon class='b7637181-f8db-4f50-8ca3-226bc60a70db' points='133.02 187.69 265.55 187.69 266.63 -544.39 217.82 -465.54 133.02 -113.2 115.72 162.98 133.02 187.69'/%3E%3Cpath class='fa83fd7e-f749-40db-a6ef-0ee0ecd426a6' d='M133,187.69c53.83-71.32,55.07-153.11,57.92-242S186-233,200.91-320.77,258-497.3,335.8-542.06l-81.11.3C174.75-500.82,128.22-414.18,109-327.26S93.11-150.32,85.85-61.64,58.78,118.85,1.48,187.49Z'/%3E%3Crect class='fa83fd7e-f749-40db-a6ef-0ee0ecd426a6' x='-198.48' y='-23.55' width='367.12' height='47.23'/%3E%3Crect class='bd3d26b0-4deb-481e-9e6c-8b536fa5d6fa' x='11.69' y='-472.78' width='12.75' height='623.23' rx='2.41' transform='matrix(1, 0.04, -0.04, 1, -5.72, -0.74)'/%3E%3Cpath class='bcd210f3-7090-4cdb-b350-a4c0c49f9791' d='M266.42,157.36h-377a31.09,31.09,0,0,1-31.09-31.09V-482.25a31.1,31.1,0,0,1,31.09-31.1h377'/%3E%3Cg id='a4de47c5-e55c-4d4e-ac84-5c55f743e0c0' data-name='DZFlyL.tif'%3E%3Cpath class='fdd236b3-5da3-4639-9bdb-09c2f292e26a' d='M97,20.88c11.16,9.62,17.23,21.63,17.22,36.39S108.1,84,97,93.59c1.92,2.88,3.81,5.69,5.69,8.52A56.19,56.19,0,0,0,124.61,54c-1-17.09-8.55-30.92-21.84-41.81ZM85.35,38.3a26.1,26.1,0,0,1,0,37.89q2.88,4.29,5.77,8.63c17.33-14.63,16.72-41.33,0-55.16Z'/%3E%3Cpath class='fdd236b3-5da3-4639-9bdb-09c2f292e26a' d='M63.56,0l1.62.46a10.44,10.44,0,0,1,7.6,9.76c0,.16,0,.33,0,.49q0,46.55,0,93.09c0,8.24-8.33,13-15.67,9.42a8.16,8.16,0,0,1-2.36-1.86A209.91,209.91,0,0,0,28.81,86.61a15.1,15.1,0,0,0-10-3.38A67.12,67.12,0,0,1,9,83.05c-4.66-.56-7.53-3.44-8.73-8A3.76,3.76,0,0,0,0,74.52V39.94a1.65,1.65,0,0,0,.18-.31c1.48-5.52,5.25-8.43,11-8.43,2.72,0,5.44-.05,8.15,0a13.26,13.26,0,0,0,8.92-3C32.06,25.09,36,22,39.57,18.53c4.88-4.63,9.58-9.46,14.2-14.36C55.41,2.44,57,.88,59.37.37c.51-.11,1-.25,1.51-.37Z'/%3E%3Cpath class='fdd236b3-5da3-4639-9bdb-09c2f292e26a' d='M97,20.88l5.78-8.67C116.06,23.1,123.59,36.93,124.61,54a56.19,56.19,0,0,1-21.93,48.09c-1.88-2.83-3.77-5.64-5.69-8.52C108.1,84,114.2,72,114.21,57.27S108.15,30.5,97,20.88Z'/%3E%3Cpath class='fdd236b3-5da3-4639-9bdb-09c2f292e26a' d='M85.35,38.3l5.77-8.64c16.73,13.83,17.34,40.53,0,55.16q-2.89-4.33-5.77-8.63A26.1,26.1,0,0,0,85.35,38.3Z'/%3E%3C/g%3E%3C/svg%3E");
@@ -539,6 +546,28 @@ main {
   height:40px;
   background-color: red;
   cursor:pointer;
+}
+
+.js-required{
+  position:absolute;
+  z-index: 4;
+  top:0;
+  left:25px;
+  right:25px;
+  text-align:center;
+  background: rgba(237, 232, 219, 0.9);
+}
+.js-required p {
+  text-align:center;
+  width: 63vh;
+  max-width: 99%;
+  margin:0 auto;
+  padding: 2em 1em;
+  font-weight:600;
+  line-height: 1.3;
+}
+.js-required p a {
+  color:#EA5736;
 }
 
 @media only screen and (min-width:1920px) and (orientation: landscape) {

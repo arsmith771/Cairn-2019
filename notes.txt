@@ -71,3 +71,14 @@ Make the man with the spade in his hand pulse smaller DONE
 3) scripts - comment out unused, add function to hide/show (just show?) text content layers.
 
 
+----------
+
+1) Add amended copy DONE
+2) Reproduce the current audio file, 15 times. (16 files in total) DONE
+3) Rename to audio-track-01.mp3,  audio-track-02.mp3 etc DONE
+4) write script function for audio play pause
+
+
+-----------
+
+1) Search and replace type="audio/mpeg" > type="audio/wav"

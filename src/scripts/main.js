@@ -25,12 +25,22 @@ function closeText(elem0, elem1, elem2, elem3){
 		
 		var audioTrack = document.getElementById( elem2 ),
 			control = jQuery( elem3 );
+
 		audioTrack.pause(); 
 		control.addClass('paused');
 		control.removeClass('playing');
 		
 
 	});
+}
+
+function closeTextAll(){
+
+	var i;
+	for (i = 0; i < 18; i++) {
+
+  		closeText('#story-screen__text__close--' + i, '#story-screen__text--' + i, 'audio-' + i, '#ctrl-' + i);
+	}
 }
 
 function ctrlAudio(elem0, elem1){
@@ -55,6 +65,38 @@ function ctrlAudio(elem0, elem1){
 	
 }
 
+function ctrlAudioAll(){
+
+	var i;
+	for (i = 0; i < 18; i++) {
+
+  		ctrlAudio('#ctrl-' + i, 'audio-' + i)
+	}
+}
+
+function audioEnded( elem0, elem1){
+
+	var audioTrack = document.getElementById(elem0),
+		button = document.getElementById(elem1);
+
+	audioTrack.addEventListener('ended',function() {
+
+		button.classList.add('paused');
+		button.classList.remove('playing');
+		console.log('audio ended');
+
+	});
+}
+
+function audioEndedAll(){
+
+	var i;
+	for (i = 0; i < 18; i++) {
+
+		audioEnded('audio-' + i, 'ctrl-' + i);
+	}
+}
+
 function modalPosition(){
 
 	var storyScreenW = jQuery('.story-screen').width();
@@ -67,7 +109,7 @@ function modalPosition(){
 
 	} else {
 
-		jQuery('.story-screen__text').removeAttr('style');
+		jQuery('.story-screen__text').css('position','absolute');
 	}
 }
 
@@ -362,8 +404,9 @@ jQuery(document).ready(function(){
 	toggleText('#layer-cta-14', '#story-screen__text--14');
 	toggleText('#layer-cta-15', '#story-screen__text--15');
 	toggleText('#layer-cta-16', '#story-screen__text--16'); */
+	/*
 	closeText('#story-screen__text__close--0', '#story-screen__text--0', 'audio-0', '#ctrl-0');
-	closeText('#story-screen__text__close--1', '#story-screen__text--1');
+	closeText('#story-screen__text__close--1', '#story-screen__text--1', 'audio-1', '#ctrl-1');
 	closeText('#story-screen__text__close--2', '#story-screen__text--2');
 	closeText('#story-screen__text__close--3', '#story-screen__text--3');
 	closeText('#story-screen__text__close--4', '#story-screen__text--4');
@@ -379,7 +422,16 @@ jQuery(document).ready(function(){
 	closeText('#story-screen__text__close--14', '#story-screen__text--14');
 	closeText('#story-screen__text__close--15', '#story-screen__text--15');
 	closeText('#story-screen__text__close--16', '#story-screen__text--16');
-	ctrlAudio('#ctrl-0', 'audio-0');
+	*/
+
+	closeTextAll();
+
+
+	//ctrlAudio('#ctrl-0', 'audio-0');
+	//ctrlAudio('#ctrl-1', 'audio-1');
+	//ctrlAudio('#ctrl-2', 'audio-2');
+	ctrlAudioAll();
+	audioEndedAll();
 	modalPosition();
 	fadeOutLoadingModal();
 
