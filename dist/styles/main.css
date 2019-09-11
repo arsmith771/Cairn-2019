@@ -303,16 +303,23 @@ main {
   background-attachment: fixed;
 }
 .loading-modal{
-  display:block;
+  display:flex;
   position:fixed;
   left:0;
   top:0;
   right:0;
   bottom:0;
   z-index: 5;
-  background-color:orange;
+  background-color: #EDE8DB;
+  justify-content: center;
+  align-items:center;
+  align-content:center;
 }
-
+.loading-modal p{
+    font-size:4vw;
+    font-weight: 600;
+    color: #999;
+}
 
 .container{position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1; overflow: hidden;}@keyframes side-to-side-small{0%{transform:translatex(0) rotate(-90deg)}50%{transform:translatex(-2vw)}100%{transform:translatex(0) rotate(-90deg)}}@keyframes side-to-side-medium{0%{transform:translatex(0) rotate(-120deg)}50%{transform:translatex(-4vw)}100%{transform:translatex(0) rotate(-120deg)}}@keyframes side-to-side-large{0%{transform:translatex(0) rotate(250deg)}50%{transform:translatex(-6vw)}100%{transform:translatex(0) rotate(250deg)}}@keyframes fall{100%{transform:translatey(123vh)}}.leaf .x-axis{width:2vmax;height:2vmax;border-top-left-radius:5vmax;border-bottom-left-radius:5vmax;border-bottom-right-radius:.1vmax;border-top-right-radius:5vmax}.brown-leaf .x-axis{background-image:url(../images/leaf-1.svg);background-size:100% auto}.red-leaf .x-axis{background-image:url(../images/leaf-2.svg)}.yellow-leaf .x-axis{background-image:url(../images/leaf-3.svg)}.green-leaf .x-axis{background-image:url(../images/leaf-4.svg)}.small-move .x-axis{animation:side-to-side-small 4s cubic-bezier(.48,0,.46,1) 3.5 forwards}.medium-move .x-axis{animation:side-to-side-medium 10s cubic-bezier(.48,0,.46,1) 5.05 forwards}.large-move .x-axis{animation:side-to-side-large 8s cubic-bezier(.48,0,.46,1) 3.05 forwards}.leaf .y-axis{animation:fall 8s ease-out forwards}
 
@@ -529,6 +536,19 @@ main {
     text-indent: -999em;
     overflow: hidden;
   }
+  .story-screen__audio__loading{
+    display: none;
+    position:absolute;
+    bottom:10px;
+    left: calc(50% - 60px);
+    line-height: 50px;
+    width:120px;
+    font-weight:600;
+    font-size:1.2em;
+    text-align:center;
+    background-color:#EA5736;
+    color:#fff;
+  }
   .story-screen__audio-ctrl--last{
     bottom:30px;
   }
@@ -570,14 +590,27 @@ main {
   color:#EA5736;
 }
 
-@media only screen and (min-width:1920px) and (orientation: landscape) {
+@media only screen and (min-width:1920px) and (min-height:800px) and (orientation: landscape) {
+
+  .story-screen__text{
+      
+       width: 520px;
+  }
+
+  .story-screen__text__header{
+
+      font-size: 1.4vw;
+  }
 
   .story-screen:nth-last-child(1) .last-screen-inner {
-  
 
       font-size: 1.15vw;
-    
       
   }
+  .story-screen__text__inner{
+
+      font-size: 1.15vw;
+  }
+
   
 }

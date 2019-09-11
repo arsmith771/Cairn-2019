@@ -43,6 +43,21 @@ function closeTextAll(){
 	}
 }
 
+function loadingAudio(){
+
+	jQuery(document).on('click','.story-screen__audio-ctrl.playing', function(){
+
+   		jQuery(this).next('.story-screen__audio__loading').css('display','inline-block');
+
+   		setTimeout(function() { 
+
+     		jQuery('.story-screen__audio__loading').fadeOut(); 
+
+   		}, 2000);
+
+	});
+}
+
 function ctrlAudio(elem0, elem1){
 
 	jQuery( elem0 ).on('click', function(){
@@ -430,6 +445,7 @@ jQuery(document).ready(function(){
 	//ctrlAudio('#ctrl-0', 'audio-0');
 	//ctrlAudio('#ctrl-1', 'audio-1');
 	//ctrlAudio('#ctrl-2', 'audio-2');
+	loadingAudio();
 	ctrlAudioAll();
 	audioEndedAll();
 	modalPosition();
