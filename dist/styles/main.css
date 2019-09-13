@@ -7,8 +7,13 @@
   outline:none;
 }
 [data-whatintent='keyboard'] *:focus {
+  outline: 3px dashed orange;
+  outline-offset: 7px;
+}
+[data-whatintent='keyboard'] .story-screen--17 a:focus {
   outline: 2px dashed orange;
-  outline-offset: 7px
+  outline-offset: 0;
+  text-decoration:underline;
 }
 body {
   font-family: 'Quicksand', sans-serif;
@@ -23,189 +28,189 @@ main {
 }
 @keyframes pulseZero{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.3);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.3);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseOne{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(2.5);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(2.5);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseTwo{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.2);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.2);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseThree{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.2);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.2);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseFour{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.1);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseFive{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.4);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.4);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseSeven{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.3);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.3);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseEight{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(2.5);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(2.5);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseNine{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.5);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.5);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseTen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.15);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.15);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseEleven{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.2);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.2);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseTwelve{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.7);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.7);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseThirteen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.5);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.5);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseFourteen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.5);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.5);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseFifteen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.2);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.2);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseSixteen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.1);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 @keyframes pulseSeventeen{
     0%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
     50%{
-      transform:scale(1.15);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1.15);
       }
     100%{
-      transform:scale(1);
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 1); transform:scale(1);
       }
 }
 .animate .text-cta--0{
