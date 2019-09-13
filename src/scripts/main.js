@@ -131,7 +131,7 @@ function modalPosition(){
 
 function fadeOutLoadingModal(){
 
-	jQuery('#loading-modal').fadeOut();
+	jQuery('#page-loading').fadeOut();
 }
 
 function toggleTextLayer(){
@@ -158,16 +158,19 @@ function isElementinViewPort2(){
 
    jQuery('.story-screen').each(function(index){
 
-      var screen = document.getElementById('story-screen--' + index),
-          rect = screen.getBoundingClientRect();
+      var 	jThis = jQuery(this),
+      		screen = document.getElementById('story-screen--' + index),
+          	rect = screen.getBoundingClientRect();
 
       if ( ( rect.top >= -100 ) && ( rect.top < 100 ) ) {
 
-        jQuery(this).addClass('animate');
+        jThis.addClass('animate');
+        jThis.find('.story-screen__footer').show();
 
       } else {
 
-        jQuery(this).removeClass('animate');
+        jThis.removeClass('animate');
+        jThis.find('.story-screen__footer').hide();
       }
       //console.log(screen);
 
